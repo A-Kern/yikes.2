@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 
 # read the log file
-df = pd.read_table('/scratch/psyc5171/dataset1/task-fingerfootlips_events.tsv')
+df = pd.read_table('tasks-fingerfootlips_events.tsv')
 
 groups = df.groupby(df['trial_type'])
 times = groups['onset'].unique()
