@@ -15,8 +15,8 @@ module load singularity
 subj=`printf "%02d" $SLURM_ARRAY_TASK_ID`
 
 # run the afni_proc.py script
-cd /scratch/psyc5171/amk14002/hw7/
+cd /scratch/psyc5171/amk14002/hw7.2/yikes.2
 for session in test retest; do
-singularity run /scratch/psyc5171/containers/burc-lite.img /scratch/psyc5171/amk14002/hw7/ap.sh $subj $session
-singularity run /scratch/psyc5171/containers/burc-lite.img /scratch/psyc5171/amk14002/hw7/run_afni_${subj}-${session}.sh
+singularity run /scratch/psyc5171/containers/burc-lite.img /scratch/psyc5171/amk14002/hw7.2/yikes.2/ap.sh $subj $session
+singularity run /scratch/psyc5171/containers/burc-lite.img /scratch/psyc5171/amk14002/hw7.2/yikes.2/run_afni_${subj}-${session}.sh
 done
