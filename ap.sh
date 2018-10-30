@@ -19,7 +19,7 @@ afni_proc.py -subj_id ${subj}-${session}                                        
         -script run_afni_${subj}-${session}.sh -scr_overwrite                                   \
         -blocks tshift align tlrc volreg blur mask scale regress             \
         -copy_anat $anat_dir/sub-${subj}_ses-${session}_T1w.nii.gz           \
-        -dsets $epi_dir/sub-${subj}_ses-${session}_task-fingerfootlips_bold*_bold.nii.gz            \
+        -dsets $epi_dir/sub-${subj}_ses-${session}_task-fingerfootlips_bold.nii.gz            \
         -tcat_remove_first_trs 2   -tshift_opts_ts -tpattern alt+z           \
         -tlrc_base MNI_avg152T1+tlrc                                         \
         -volreg_align_to first                                               \
