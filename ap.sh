@@ -15,7 +15,7 @@ set epi_dir   = $top_dir/func
 set stim_dir  = $top_dir/onsets
 
 # run afni_proc.py to create a single subject processing script
-afni_proc.py -subj_id -subj_id ${subj}-${session}                                                \
+afni_proc.py -subj_id ${subj}-${session}                                                \
         -script run_afni_${subj}-${session}.sh -scr_overwrite                                   \
         -blocks tshift align tlrc volreg blur mask scale regress             \
         -copy_anat $anat_dir/sub-${subj}_ses-${session}_T1w.nii.gz           \
